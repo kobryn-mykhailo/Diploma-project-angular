@@ -1,0 +1,15 @@
+{
+  "name": "ys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tester"
+  },
+  "author": "\u001b[DMike",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}
