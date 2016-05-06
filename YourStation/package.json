@@ -1,15 +1,19 @@
 {
-  "name": "ys",
+  "name": "yourstation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "tester"
   },
-  "author": "\u001b[DMike",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kobryn-mykhailo/Diploma-project.git"
+  },
+  "author": "kobryn-michael",
   "license": "ISC",
-  "dependencies": {
-    "angular": "^1.5.5",
-    "bootstrap": "^3.3.6"
-  }
+  "bugs": {
+    "url": "https://github.com/kobryn-mykhailo/Diploma-project/issues"
+  },
+  "homepage": "https://github.com/kobryn-mykhailo/Diploma-project#readme"
 }
