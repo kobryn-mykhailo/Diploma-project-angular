@@ -1,6 +1,8 @@
-(function() {
-	'use strict';
+'use strict'
 
-	var ysApp = angular.module('ysApp', ['ngRoute']);
+var ysApp = angular.module('ysApp', ['ngRoute']);
 
-})()
+
+
+    // create the controller and inject Angular's $scope
+    

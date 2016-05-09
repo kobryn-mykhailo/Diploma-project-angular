@@ -1,3 +1,41 @@
+header {
+  position: fixed;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95); }
 
+.head ul {
+  list-style-type: none;
+  margin-left: -40px;
+  font-size: 1.2em;
+  color: black;
+  margin: 0px;
+  height: 55px;
+  position: relative;
+  padding-left: 0px; }
+  .head ul li {
+    display: inline-block;
+    float: left;
+    height: 55px; }
+    .head ul li:first-child {
+      color: black; }
+    .head ul li.separator {
+      margin-top: 20px;
+      height: 18px;
+      border-left: 1px solid #696562; }
+    .head ul li a {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 1.2em;
+      font-weight: 500;
+      display: block;
+      text-decoration: none;
+      padding: 10px 12px 14px 12px;
+      color: white; }
+
+div[back-img] {
+  width: 100%;
+  height: 667px;
+  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

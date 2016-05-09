@@ -2,21 +2,42 @@
 <html data-ng-app="ysApp">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>YS</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="sass/style.css">
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/app.routes.js"></script>
+	<script type="text/javascript" src="app/components/mainpage/mp.directive.js"></script>
+
 </head>
 <body>
+	
 	<header>
-		<div>
+		<div class="head">
 			<ul>
 				<li><a href="#/">ГОЛОВНА</a></li>
+				<li class="separator"></li>
 				<li><a href="#/">ПОСЛУГИ</a></li>
+				<li class="separator"></li>
 				<li><a href="#/">ПРОЕКТИ</a></li>
+				<li class="separator"></li>
 				<li><a href="#/">БРИФ</a></li>
+				<li class="separator"></li>
 				<li><a href="#/">БЛОГ</a></li>
+				<li class="separator"></li>
 				<li><a href="#/">КОНТАКТИ</a></li>
 			</ul>
 		</div>
 	</header>
-	<div class="view-wrapper" data-ng-view></div>
+	
+	<div>
+		<div class="view-wrapper" data-ng-view></div>
+	</div>
+	<!-- <div back-img="app/img/numone.jpg'" >Hello there</div> -->
+
 </body>
 </html>
