@@ -1,0 +1,12 @@
+<div id="overflow" class="overflow">
+    
+	<div class="images">
+		<div ng-repeat="phot in photos track by $index" class="pictureDescription">
+	    	<img image-lazy-src="{{phot.p}}" width="400px">
+	    	<p><a href="{{phot.hrefs}}" target="_blank">{{phot.description}}<span>{{phot.details}}</span></a></p>
+	    </div>
+	</div>
+
+</div>
+
+    

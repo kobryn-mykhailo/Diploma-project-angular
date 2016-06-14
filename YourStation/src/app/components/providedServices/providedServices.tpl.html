@@ -1,0 +1,55 @@
+<div class="services" ng-controller="servicesCtrl">
+	<div class="description">
+		<div class="container slider">
+		    <img ng-repeat="slide in slides" ng-hide="!isCurrentSlideIndex($index)" class="slide slide-animation" ng-src="{{slide.image}}">
+		    	<a class="arrow prev" href="#/services" ng-click="nextSlide()"></a>
+    			<a class="arrow next" href="#/services" ng-click="prevSlide()"></a>
+		    <nav class="nav">
+			<div class="wrapper">
+			<ul class="dots">
+			<li class="dot" ng-repeat="slide in slides">
+			         <a href="#/services" ng-class="{'active':isCurrentSlideIndex($index)}"
+			            ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+			</ul>
+			</div>
+			</nav>
+		</div>
+	</div>
+	<div class="glass">
+		<div id="scrollbar">
+			<p class="heading" ng-repeat="info in infos" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+				{{info.heading}}
+			</p>
+			<p class="info" ng-repeat="info in infos" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+				{{info.information}}
+			</p>
+		</div>
+	</div>
+	<div class="list glass" ng-repeat="slide in slides">
+		<p class="heading" ng-repeat="info in infos" ng-src="{{slide.image}}">
+			<a href="#/services" ng-class="{'active':isCurrentSlideIndex($index)}"
+			            ng-click="setCurrentSlideIndex($index);">{{info.heading}}</a>
+		</p>
+	</div>
+
+</div>
+	
+
+
+
+	<!-- <div>
+		<img class="bus" src="app/img/busik.png" width="100px;">
+		<div class="route">
+			<span class="station"></span>
+			<span class="station"></span>
+			<span class="station"></span>
+			<span class="station"></span>
+			<span class="station"></span>
+			<span class="station"></span>
+			<span class="station"></span>
+		</div>
+		
+
+	</div> -->
+
+</div>

@@ -1,0 +1,94 @@
+
+
+<div class="container">
+	<div class="invite">
+		<div class="request">
+			<div class="adress">
+				<p>Надішліть нам запит</p>
+				<div class="blackline"></div>
+				<div>
+					
+				</div>
+				
+			</div>
+			<div>
+				<p class="connection">форма зв'язку</p>
+			</div>			
+			<form id="query-form" name="myForm" ng-submit="show()">
+				<div class="insert" >	    
+				    <label for="query">ЗАПИТ</label>
+				    <select name="querytype" id="query" ng-model="selectedName" ng-options="x for x in names"></select>
+				</div>
+				<div class="insert">
+				    <label for="name">ІМ'Я</label>
+				    <input id="name" type="text" name="name" required ng-model="namen"/>
+				</div>
+				<div class="insert">
+				    <label for="company">КОМПАНІЯ</label>
+				    <input id="company" type="text" name="company" ng-model="companies"/>
+				</div>
+				<div class="insert">    
+				    <label for="mail">EMAIL</label>
+				    <input id="mail" type="email" name="email" ng-model="email" required/>
+				</div>
+				<div class="insert">
+				    <label for="phone">ТЕЛЕФОН</label>
+				    <input id="phone" type="text" name="phonenumber" ng-model="phoneNumber"></input>
+				</div>
+				<div class="insert">
+				    <label for="message">ПОВІДОМЛЕННЯ</label>
+				    <textarea id="message" type="text" name="notes" rows="1" ng-model="messages"></textarea>
+				</div>
+					<div class="boldline"></div>
+				    <button type="submit" id="postForm" class="sendform" ng-submit="show()" ng-disabled="userForm.$invalid">Відправити</button>
+				    <div class="boldline"></div>
+			</form>
+			
+			<button id="setbtn" type="button" ng-click="mapPos='mapMove'">ЗНАЙТИ НАС НА КАРТІ<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+			<div class="purpleline"></div>
+
+		</div>
+		<div class="info" back-img="app/img/lady.gif">
+			<div class="all">
+				<p class="callus">Зв'яжіться з нами</p>
+				<div class="callme">
+					<div class="please">
+						<p>Подзвоніть за номером</p>
+					</div>
+					<div class="phone">
+						<p>012345678</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<i class="fa fa-times" ng-class="mapPos" aria-hidden="true" ng-click="mapPos=''"></i>
+	<div class="shadow"  ng-class="mapPos" ng-click="mapPos=''"></div>
+	<div class="background" ng-class="mapPos"></div>
+	<div id="map" class="mapStay" ng-class="mapPos"></div>
+
+	<script type="text/ng-template" id="modal.html">
+		<div class="modal fade" >
+	      <div class="modal-dialog">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+	            <h4 class="modal-title"></h4>
+	          </div>
+	          <div class="modal-body">
+	            <h4>Ви успішно надіслали запит. Ми зв'яжемося з Вами якнайшвидше.</h4>
+	          </div>
+	          <div class="modal-footer">
+	            
+	            <button type="button" ng-click="close('Yes')" class="btn btn-primary" data-dismiss="modal">OK</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	</script>
+
+</div>
+
+
+
+

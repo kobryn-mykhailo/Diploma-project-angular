@@ -1,3 +1,6 @@
+(function() {
+
+
 'use strict'
 
 ysApp.directive('backImg', function(){
@@ -9,3 +12,5 @@ ysApp.directive('backImg', function(){
         });
     };
 });
+
+})();

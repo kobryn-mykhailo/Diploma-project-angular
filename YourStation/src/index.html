@@ -2,42 +2,78 @@
 <html data-ng-app="ysApp">
 <head>
 	<meta charset="UTF-8">
+	<link rel="icon" href="favicon.png" type="image/png">
 	<title>YS</title>
+
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Rubik+Mono+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="sass/style.css">
-	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<!-- for slider -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
+	<!-- for slider -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+	<!-- for slider -->
+	<script type="text/javascript" src="bower_components/ui-bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+	<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+	<!-- for slider -->
+	<!-- Backand SDK for Angular -->
+  	<script src="//cdn.backand.net/backand/dist/1.8.2/backand.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
+
 	<script type="text/javascript" src="app/app.js"></script>
 	<script type="text/javascript" src="app/app.routes.js"></script>
 	<script type="text/javascript" src="app/components/mainpage/mp.directive.js"></script>
+	<script type="text/javascript" src="app/components/mainpage/linker.js/"></script>
+	<script type="text/javascript" src="app/components/mainpage/navigate.js/"></script>
+	<script type="text/javascript" src="app/components/contacts/contacts.js"></script>
+	<script type="text/javascript" src="app/components/providedServices/services.js/"></script>
+	<script type="text/javascript" src="app/components/projects/projects.js"></script>
+
+	<!-- Sender -->
+	
+	
+	
+	<!-- /Sender -->
 
 </head>
 <body>
 	
 	<header>
-		<div class="head">
+		<div class="head" ng-controller="navCtrl">
 			<ul>
-				<li><a href="#/">ГОЛОВНА</a></li>
+				<li class="linker" ng-class="{active: isActive('/')}"><a href="#/">ГОЛОВНА</a></li>
 				<li class="separator"></li>
-				<li><a href="#/">ПОСЛУГИ</a></li>
+				<li class="linker" ng-class="{active: isActive('/services')}"><a href="#/services">ПОСЛУГИ</a></li>
 				<li class="separator"></li>
-				<li><a href="#/">ПРОЕКТИ</a></li>
+				<li class="linker" ng-class="{active: isActive('/projects')}"><a href="#/projects">ПРОЕКТИ</a></li>
+				<!-- <li class="separator"></li> -->
+				<!-- <li class="linker" ng-class="{active: isActive('/brief')}"><a href="#/brief">БРИФ</a></li> -->
+				<!-- <li class="separator"></li> -->
+				<!-- <li class="linker" ng-class="{active: isActive('/blog')}"><a href="#/blog">БЛОГ</a></li> -->
 				<li class="separator"></li>
-				<li><a href="#/">БРИФ</a></li>
-				<li class="separator"></li>
-				<li><a href="#/">БЛОГ</a></li>
-				<li class="separator"></li>
-				<li><a href="#/">КОНТАКТИ</a></li>
+				<li class="linker" ng-class="{active: isActive('/contacts')}"><a href="#/contacts">КОНТАКТИ</a></li>
 			</ul>
 		</div>
 	</header>
-	
+	<a href="#/"><img class="logo" src="app/img/logo.png"></a>
+
+
 	<div>
 		<div class="view-wrapper" data-ng-view></div>
 	</div>
-	<!-- <div back-img="app/img/numone.jpg'" >Hello there</div> -->
 
 </body>
 </html>
